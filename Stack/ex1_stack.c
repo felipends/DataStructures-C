@@ -1,3 +1,5 @@
+/************ Check parentheses balance ***************/
+
 #include <stdio.h>
 #include <stdlib.h>
 
