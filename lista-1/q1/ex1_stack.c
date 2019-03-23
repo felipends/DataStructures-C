@@ -4,10 +4,9 @@
 #include <stdlib.h>
 #include "../stack_ds.h"
 
-int main(void)
-{
-    intStack s = {.top = -1, .size = 10};
-    s.stack = (int *)malloc(s.size * sizeof(int));
+int main(void){
+	intStack s = {.top = -1, .size = 10};
+   	s.stack = (int *)malloc(s.size * sizeof(int));
 
     size_t text_size = 10;
     char *text = (char *) malloc(text_size * sizeof(char));
@@ -18,8 +17,7 @@ int main(void)
     
     size_t size_count = 0;
     int i = 0;
-    while (1)
-    {
+    while (1){
         scanf("%c", &text[i]);
 	size_count++;
 	if (size_count > text_size)
@@ -27,14 +25,10 @@ int main(void)
         if (text[i] == '\n')
             break;
         if (text[i] == '(')
-        {
             int_push(&s, 1);
-        }
-        else if (text[i] == ')')
-        {
+        else if (text[i] == ')'){
             pop_result = int_pop(&s);
-            if (pop_result == 0)
-            {
+            if (pop_result == 0){
                 flag = 0;
                 break;
             }
