@@ -1,5 +1,3 @@
-*
+pdfs
+.vscode
 
-!.gitignore
-!q2/ex2_stack.c
-!stack_ds.h
